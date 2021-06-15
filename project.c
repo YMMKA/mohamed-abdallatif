@@ -63,20 +63,24 @@ void search ()
     ListNodePtr current = startPtr;
     if(startPtr == NULL)
     {
-        printf("\n\t\t\tList is Empty\n") ;
+        system("cls");
+        headMessage("MAIN MENU");
+        printf("\n\t\t\tList is Empty\n");
     }
     else
     {
         printf("\n\t\t\tEnter Id :");
         scanf("%d",&id);
+        system("cls");
+        headMessage("MAIN MENU");
         while (current != NULL)
         {
             if (current->l.id == id)
             {
                 printf ("\n\t\t\tbook_Name: %s\n", current->l.bookname);
-                printf ("\n\t\t\tID Number: %d\n", current->l.id);
-                printf ("\n\t\t\tauthor_name: %s\n", current->l.author);
-                printf ("\n\t\t\tprice: %f\n", current->l.price);
+                printf ("\t\t\tID Number: %d\n", current->l.id);
+                printf ("\t\t\tauthor_name: %s\n", current->l.author);
+                printf ("\t\t\tprice: %f\n", current->l.price);
                 return;
             }
             current = current->nextPtr;
