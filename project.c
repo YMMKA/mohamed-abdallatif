@@ -57,42 +57,34 @@ void insert(ListNodePtr *sPtr, char *bookname,int id,char *author,float price)
     system("cls");
     headMessage("MAIN MENU");
 }
-ListNode *Query()
+void search ()
 {
-    ListNodePtr current = startPtr;
-
     int id;
-    if (startPtr == NULL)
+    ListNodePtr current = startPtr;
+    if(startPtr == NULL)
     {
-        printf("\t\t\tlinked list is empty.\n");
-        printf("\t\t\tPlz Enter Data first into linked list\n");
+        printf("\n\t\t\tList is Empty\n") ;
     }
-    else{
- printf("\n\n\t\t\tEnter BOOK ID to search for: ");
-    scanf("%u",&id);
-        while (current->l.id != id)
+    else
+    {
+        printf("\n\t\t\tEnter Id :");
+        scanf("%d",&id);
+        while (current != NULL)
         {
-            current = current->nextPtr;
-            if (current == NULL)
+            if (current->l.id == id)
             {
-                printf("\t\t\tPlz insert correct ID NO\n");
-                return 0;
+                printf ("\n\t\t\tbook_Name: %s\n", current->l.bookname);
+                printf ("\n\t\t\tID Number: %d\n", current->l.id);
+                printf ("\n\t\t\tauthor_name: %s\n", current->l.author);
+                printf ("\n\t\t\tprice: %f\n", current->l.price);
+                return;
             }
+            current = current->nextPtr;
         }
-        return current;
-    }
-}
+        if(current==NULL)
+        {
+            printf("\n\t\t\tId Not found\n");
+        }
 
-int displayQuery()
-{
-    ListNode *ptr;
-    ptr = malloc(sizeof(ListNode));
-    ptr = Query();
-    printf("\n\t\t\tBook ID NO: %s", ptr->l.bookname);
-    printf("\n\t\t\tBOOK Price: %d", ptr->l.id);
-    printf("\n\t\t\tBook Name: %s", ptr->l.author);
-    printf("\n\t\t\tAuthor Name: %f", ptr->l.price);
-    printf("\n\t\t\t_______________________________ BOOK DATA END _______________________________");
-    puts("\n");
-    return 0;
+    }
 }
