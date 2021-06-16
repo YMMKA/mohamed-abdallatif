@@ -20,7 +20,7 @@ ListNodePtr startPtr = NULL; // initially there are no nodes
 // insert a new value into the list in sorted order
 void insert(ListNodePtr *sPtr, char *bookname,int id,char *author,float price)
 {
-    ListNode* newPtr =(ListNode*) malloc(sizeof(ListNode)); // create node
+    ListNode* newPtr = malloc(sizeof(ListNode)); // create node
 
     if (newPtr != NULL)   // is space available?
     {
