@@ -112,3 +112,13 @@ void exitMessage()
     printf("\n\t\t\t  **-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**\n");
     printf("\n                          ");
 }
+int isNumVaild(int *px)
+{
+    int vaildnum=1;
+
+    if (!(isdigit(&px))&& !isspace(&px)&& getchar()!= '\n')
+    {
+        vaildnum=0;
+    }
+    return vaildnum;
+}
