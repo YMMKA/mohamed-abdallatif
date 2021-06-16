@@ -55,24 +55,25 @@ void insert(ListNodePtr *sPtr, char *bookname,int id,char *author,float price)
         printf("%d not inserted. No memory available.\n", id);
     }
     system("cls");
-    headMessage("MAIN MENU");
+    headMessage("ADD NEW BOOKS");
 }
 void search ()
 {
     int id;
     ListNodePtr current = startPtr;
+     headMessage("SEARCH");
     if(startPtr == NULL)
     {
-        system("cls");
-        headMessage("MAIN MENU");
         printf("\n\t\t\tList is Empty\n");
+        system("pause");
+        system("cls");
     }
     else
     {
         printf("\n\t\t\tEnter Id :");
         scanf("%d",&id);
         system("cls");
-        headMessage("MAIN MENU");
+         headMessage("SEARCH");
         while (current != NULL)
         {
             if (current->l.id == id)
@@ -80,7 +81,9 @@ void search ()
                 printf ("\n\t\t\tbook_Name: %s\n", current->l.bookname);
                 printf ("\t\t\tID Number: %d\n", current->l.id);
                 printf ("\t\t\tauthor_name: %s\n", current->l.author);
-                printf ("\t\t\tprice: %f\n", current->l.price);
+                printf ("\t\t\tprice: %.2f\n", current->l.price);
+                system("pause");
+                system("cls");
                 return;
             }
             current = current->nextPtr;
@@ -88,6 +91,8 @@ void search ()
         if(current==NULL)
         {
             printf("\n\t\t\tId Not found\n");
+            system("pause");
+            system("cls");
         }
 
     }
