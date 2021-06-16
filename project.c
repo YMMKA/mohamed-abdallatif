@@ -92,3 +92,18 @@ void search ()
 
     }
 }
+void exitMessage()
+{
+    headMessage("faculty of engineering  shoubra banha");
+    printf("\n\n\n\n\n");
+    printf("\n\t\t\t  **-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**\n");
+    printf("\n\t\t\t        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+    printf("\n\t\t\t        =                 WITH                      =");
+    printf("\n\t\t\t        =                  OUR                      =");
+    printf("\n\t\t\t        =                  BEST                     =");
+    printf("\n\t\t\t        =                 WISHES                    =");
+    printf("\n\t\t\t        =                GOOD LUCK                  =");
+    printf("\n\t\t\t        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
+    printf("\n\t\t\t  **-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**\n");
+    printf("\n                          ");
+}
